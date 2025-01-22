@@ -1,7 +1,6 @@
-FROM php:7.2
+FROM ubuntu:24.04
 RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get install -y maven
+RUN apt-get install -y git maven
 RUN git clone https://github.com/francesco-bianchi/progettoTpsitServer.git
 WORKDIR progettoTpsitServer
 RUN mvn clean install
